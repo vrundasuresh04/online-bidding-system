@@ -2,6 +2,7 @@ import { Link } from "react-router";
 import { usePrefetchHandlers } from "../hooks/useAuction.js";
 
 export default function AuctionCard({ auction }) {
+  console.log(auction);
   const daysLeft = Math.ceil(auction.timeLeft / (1000 * 60 * 60 * 24));
   const isActive = daysLeft > 0;
   const { prefetchAuction } = usePrefetchHandlers();

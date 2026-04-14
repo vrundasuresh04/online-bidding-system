@@ -14,7 +14,7 @@ const formatAuctionForFrontend = (auction, bids = []) => {
     itemName: auction.title,
     itemDescription: auction.description,
     itemCategory: "General", // Placeholder for categories feature
-    itemPhoto: auction.images && auction.images[0] ? auction.images[0] : "",
+    itemPhoto: auction.images?.[0] || "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338",
     startingPrice: auction.startingPrice,
     currentPrice: auction.currentPrice,
     itemStartDate: auction.startDate,
